@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+.main{
+    height: 100vh;
+}
+header{
+    /* margin:; */
+    align-items: center;
+    gap: 10px;
+}
+
+.searchArea{
+    padding: 1px;
+    align-items: center;
+}
+
+.searchBar{
+    align-items: center;
+    gap: 50px;
+    padding: 8px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+#searchInput{
+    outline: none;
+    border: none;
+    transform: scale(1.5);
+}
+
+#homeBtn{
+    border-radius: 50%;
+    padding: 10px;
+    transform: scale(0.75);
+}
