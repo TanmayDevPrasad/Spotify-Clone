@@ -17,3 +17,21 @@
 .flex{
     display: flex;
 }
+
+.superflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mcHeight{
+    height: calc(100vh - 14vh);
+}
+
+.borderRadius{
+    border-radius: 10px;
+}
+
+.svg-color{
+    color: #b3b3b3;
+}

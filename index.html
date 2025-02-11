@@ -10,31 +10,91 @@
 </head>
 
 <body class="black-bg">
-    <div class="main">
 
-        <header class="redBorder flex">
+    <header class="flex">
 
-            <div class="logoBox redBorder">
+        <div class="temp flex">
+
+            <!-- Logo -->
+            <div class="logoBox flex">
                 <img src="Assets/logo.svg" alt="Spotify Logo" class="invert-color">
             </div>
 
-            <div class="searchArea redBorder flex">
+            <!-- searchbar area -->
+            <div class="searchArea flex">
 
                 <div id="homeBtn" class="light-grey-bg">
                     <img src="Assets/home.svg" alt="home-btn" class="invert-color">
                 </div>
 
                 <div class="searchBar light-grey-bg flex">
-                    <img src="Assets/search.svg" alt="search-icon" class="invert-color">
-                    <input type="text" placeholder="Search" class="black-bg light-grey-bg" id="searchInput">
+                    <div class="leftside superflex">
+                        <div class="svg">
+
+                            <img src="Assets/search.svg" alt="search-icon" class="invert-color">
+                        </div>
+                        <input type="text" placeholder="What do you want to play?" class="black-bg light-grey-bg"
+                            id="searchInput">
+                    </div>
                     <img src="Assets/browse.svg" alt="browse-icon" class="invert-color">
                 </div>
-                
+
             </div>
-        </header>
-        <aside class="redBorder"></aside>
-        <main class="redBorder"></main>
+        </div>
+
+        <!-- navigation area -->
+        <nav class="superflex">
+            <div class="leftNav superflex">
+                <span>Premium</span>
+                <span>Support</span>
+                <span>Download</span>
+            </div>
+            <span id="rod">|</span>
+            <div class="rightNav superflex">
+                <span class="superflex">
+                    <img src="Assets/install.svg" alt="install-icon" class="invert-color">
+                    Install App
+                </span>
+                <span>Sign Up</span>
+                <button id="logbtn">Log in</button>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- main content -->
+    <div class="content flex">
+
+        <!-- sidebar content -->
+        <aside class="mcHeight borderRadius">
+
+            <!-- heading -->
+            <div class="heading flex">
+                <div class="left flex">
+                    <img src="Assets/library.svg" alt="library-icon" class="invert-color svg-color">
+                    <span>Your Library</span>
+                </div>
+                <div class="right">
+                    <img src="Assets/plus.svg" alt="library-icon" class="invert-color">
+                </div>
+            </div>
+
+            <!-- scrollable content in this section -->
+            <div class="libContent">
+
+            </div>
+
+            <!-- footer links -->
+            <div class="footerLinks flex">
+
+            </div>
+        </aside>
+
+        <main class="mcHeight borderRadius"></main>
     </div>
+
+
+
 </body>
 
 </html>
