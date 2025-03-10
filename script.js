@@ -13,7 +13,7 @@ const previousBtn = document.getElementById("previous") //variable to select pre
 async function getSongs(directory) {
     console.log("Fetching songs from:", directory);  // Debugging log
     currentFolder = directory;
-    let data = await fetch(`http://127.0.0.1:3000/${currentFolder}/`)      //fetching the html site consisting index of songs
+    let data = await fetch(`/${currentFolder}/`)      //fetching the html site consisting index of songs
     let response = await data.text();       //parsing the html into text
 
     let div = document.createElement("div")
@@ -56,7 +56,7 @@ async function getSongs(directory) {
 
 //function to fetch playlist album folders and display them dynamically
 async function displayAlbums() {
-    let data = await fetch(`http://127.0.0.1:3000/songs`)       //fetching the html site of hosted album folders
+    let data = await fetch(`/songs`)       //fetching the html site of hosted album folders
     let firstAlbum = null;
     let response = await data.text();                           //parsing the html into text
     let albumContainer = document.querySelector(".playlists")
@@ -71,7 +71,7 @@ async function displayAlbums() {
             let folder = element.href.split("/").slice(-2)[0];
 
             //fetching the metadata of the album folder
-            let material = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`)
+            let material = await fetch(`/songs/${folder}/info.json`)
             let info = await material.json();   //fetching the json file for getting info
 
 
