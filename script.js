@@ -56,7 +56,7 @@ async function getSongs(directory) {
 
 //function to fetch playlist album folders and display them dynamically
 async function displayAlbums() {
-    let data = await fetch(`/songs`)       //fetching the html site of hosted album folders
+    let data = await fetch(`/Songs`)       //fetching the html site of hosted album folders
     let firstAlbum = null;
     let response = await data.text();                           //parsing the html into text
     let albumContainer = document.querySelector(".playlists")
@@ -71,7 +71,7 @@ async function displayAlbums() {
             let folder = element.href.split("/").slice(-2)[0];
 
             //fetching the metadata of the album folder
-            let material = await fetch(`/songs/${folder}/info.json`)
+            let material = await fetch(`/Songs/${folder}/info.json`)
             let info = await material.json();   //fetching the json file for getting info
 
 
@@ -94,7 +94,7 @@ async function displayAlbums() {
             //configuring songCards when clicked to open their songs list in the aside library
             Array.from(document.querySelectorAll(".songCard")).forEach(element => {
                 element.addEventListener("click", async (obj) => {
-                    songs = await getSongs(`songs/${obj.currentTarget.dataset.folder}`)        //getting the array of song files
+                    songs = await getSongs(`Songs/${obj.currentTarget.dataset.folder}`)        //getting the array of song files
                     playTrack(songs[0])
                 }
                 )
@@ -109,7 +109,7 @@ async function displayAlbums() {
     // Load songs from the first album by default
     if (firstAlbum) {
         console.log(`Loading songs from first album: ${firstAlbum}`);
-        getSongs(`songs/${firstAlbum}`);
+        getSongs(`Songs/${firstAlbum}`);
     }
 }
 
